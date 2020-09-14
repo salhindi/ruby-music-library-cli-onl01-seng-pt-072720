@@ -49,7 +49,7 @@ class Song
   end
   
   def self.new_from_filename(filename)
-  # binding.pry
+  binding.pry
   file = filename.split(" - ")
     song_name = file[1]
 
