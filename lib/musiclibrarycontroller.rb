@@ -69,6 +69,8 @@ class MusicLibraryController
    end
   end
   
+  case input
+    while 
   
     
 end
