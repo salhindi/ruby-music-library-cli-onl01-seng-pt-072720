@@ -70,7 +70,8 @@ class MusicLibraryController
   end
   
   case input
-    while 
+    when "list_songs"
+      
   
     
 end
