@@ -29,11 +29,7 @@ class MusicLibraryController
        input = gets.strip
     end
     
-  case input
-    when "list songs"
-      list_songs
-    end
-  end
+  
     
   def list_songs
       # binding.pry
