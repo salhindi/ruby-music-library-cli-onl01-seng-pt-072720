@@ -52,6 +52,7 @@ class Song
   # binding.pry
   file = filename.split(" - ")
     song_name = file[1]
+
     artist_name = file[0]
     genre_name = file[2].delete(".mp3")
     
@@ -63,4 +64,6 @@ class Song
   def self.create_from_filename(filename)
     self.new_from_filename(filename).save
   end
- end
+    
+
+end
