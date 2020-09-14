@@ -45,8 +45,4 @@ class MusicLibraryController
       puts "Please enter the name of an artist:"
       
   end
-    
-    
-
   end
-end
