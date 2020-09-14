@@ -74,7 +74,3 @@ class MusicLibraryController
       list_songs
     end
   end
-  end
-  
-    
-end
