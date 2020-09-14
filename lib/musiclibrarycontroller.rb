@@ -69,9 +69,5 @@ class MusicLibraryController
    end
   end
   
-  case input
-    when "list_songs"
-      list_songs
-    end
-  end
+  
 end
