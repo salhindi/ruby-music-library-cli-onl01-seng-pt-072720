@@ -2,6 +2,7 @@ require 'pry'
 
 class MusicLibraryController
   attr_accessor :path 
+
   def initialize(path = "./db/mp3s")
     @path = path
     MusicImporter.new(path).import
@@ -29,24 +30,24 @@ class MusicLibraryController
     end
   end
     
-    def list_songs
+  def list_songs
       # binding.pry
       Song.all.sort{ |a, b| a.name <=> b.name }.each_with_index{|x, i| puts "#{i + 1}. #{x.artist.name} - #{x.name} - #{x.genre.name}" }
-    end
+  end
     
-    def list_artists
+  def list_artists
       Artist.all.sort{ |a, b| a.name <=> b.name }.each_with_index{|x, i| puts "#{i+1}. #{x.name}"}
-    end
+  end
     
-    def list_genres
+  def list_genres
       Genre.all.sort{ |a, b| a.name <=> b.name }.each_with_index{|x, i| puts "#{i+1}. #{x.name}"}
-    end
+  end
     
-    def list_songs_by_artist
-      puts "Please enter the name of an artist:"
-      input = gets.strip
-      if artist = Artist.find_by_name(input)
-        artist.all.sort{ |a, b| a.name <=> b.name }.each_with_index{|x, i| puts "#{i + 1}. #{x.name} - #{x.genre.name}" }
-        end
-      end
-      end
+  def list_songs_by_artist
+    puts "Please enter the name of an artist:"
+    input = gets.strip
+    if artist = Artist.find_by_name(input)
+      artist.all.sort{ |a, b| a.name <=> b.name }.each_with_index{|x, i| puts "#{i + 1}. #{x.name} - #{x.genre.name}" }
+    end
+  end
+end
