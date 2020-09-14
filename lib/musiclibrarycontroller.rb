@@ -57,5 +57,8 @@ class MusicLibraryController
     if genre = Genre.find_by_name(input)
       genre.songs.sort{|a, b| a.name <=> b.name }.each_with_index{|x, i| puts "#{i + 1}. #{x.artist.name} - #{x.name}" }
     end
-  end  
+  end
+  
+  def play_song
+    
 end
